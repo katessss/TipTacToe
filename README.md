@@ -14,7 +14,6 @@ def victory(sym):
     return False
 
 
-# Вывод карты на экран
 def print_maps():
     print(*a0)
     print(*a1)
@@ -28,12 +27,10 @@ def step_maps(s1,s2,sym):
 
 GR=False
 while GR == False:
-
     if len(saved)==9:
         print('НИЧЬЯ')
         GR=True
         break
-
     step1, step2 = map(int, input('ход x: ').split())
     while (step1, step2) in saved:
         print('место занято, выберите другое')
@@ -46,7 +43,6 @@ while GR == False:
         if GR == True:
             print('х - ВЫИГРАЛ')
             break
-
     step1, step2 = map(int, input('ход o: ').split())
     while (step1, step2) in saved:
         print('место занято, выберите другое')
